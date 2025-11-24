@@ -1,21 +1,23 @@
-numbers = []
-while True:
-    user_input = input("Enter a number (leave blank to stop): ")
+def find_min_max():
+    numbers = []
 
-    if user_input == "":
-        break
-    try:
-        num = float(user_input)
-        numbers.append(num)
-    except ValueError:
-        print("Please enter a valid number.")
+    while True:
+        user_input = input("Enter a number (or press Enter to quit): ")
 
-if numbers:
-    smallest = min(numbers)
-    largest = max(numbers)
-    print(f"\nSmallest number: {smallest}")
-    print(f"Largest number: {largest}")
+        if user_input == "":
+            break
 
+        try:
+            number = float(user_input)  # Convert input to float to handle decimals as well
+            numbers.append(number)
+        except ValueError:
+            print("Please enter a valid number.")
 
-else:
-    print("\nNo numbers were entered.")
+    if numbers:
+        print(f"The smallest number is: {min(numbers)}")
+        print(f"The largest number is: {max(numbers)}")
+    else:
+        print("No numbers were entered.")
+
+# Run the program
+find_min_max()
