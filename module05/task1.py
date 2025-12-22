@@ -4,9 +4,10 @@ class Car:
         self.maximum_speed = maximum_speed
         self.current_speed = 0
         self.travelled_distance = 0
-car = Car ("ABC-123", 142)
+car = Car("ABC-123", 142)
 print("Registration Number:", car.registration_number)
-print("Maximum Speed:", car.maximum_speed, "km/h")
-print("Current Speed:", car.current_speed, "km/h")
-print("Travelled Distance:", car.travelled_distance, "km")
+print("Maximum Speed: ", car.maximum_speed, "km/h")
+print("Current Speed: ", car.current_speed, "km/h")
+print("Travel Distance: ", car.travelled_distance, "km")
+
 
